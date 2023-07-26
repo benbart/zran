@@ -27,10 +27,10 @@ except Exception:
     have_cython = False
 
 print(
-    f'''zran setup
-    have_cython: {have_cython} (if True, modules will be cythonized, else cythonized C files are assumed to be present)
-    ZLIB_HOME:   {ZLIB_HOME} (if set, ZLIB sources are compiled into the indexed_gzip extension)
-'''
+    '''zran setup
+    have_cython: %s (if True, modules will be cythonized, else cythonized C files are assumed to be present)
+    ZLIB_HOME:   %s (if set, ZLIB sources are compiled into the indexed_gzip extension)
+''' % (have_cython, ZLIB_HOME)
 )
 
 # compile flags
