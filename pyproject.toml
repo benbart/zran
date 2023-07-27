@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=61.0", "setuptools_scm[toml]>=6.2", "wheel>=0.40.0", "cython>=3.0.0b1"]
+requires = ["setuptools>=25.1.1", "setuptools_scm[toml]", "wheel", "cython>=3.0.0"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
@@ -13,7 +13,7 @@ where = ["src"]
 
 [project]
 name = "zran"
-requires-python = ">=3.8"
+requires-python = ">=3.5"
 dynamic = ["version"]
 authors = [
     {name="Forrest Williams", email="ffwilliams2@alaska.edu"},
@@ -27,6 +27,7 @@ classifiers=[
     "Operating System :: OS Independent",
     "Programming Language :: C",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.5",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",

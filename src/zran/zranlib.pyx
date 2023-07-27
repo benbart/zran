@@ -46,7 +46,7 @@ def check_for_error(return_code):
         elif return_code == error_codes["Z_STREAM_ERROR"]:
             raise ZranError("zran: failed with Z_STREAM_ERROR")
         else:
-            raise ZranError(f"zran: failed with error code {return_code}")
+            raise ZranError("zran: failed with error code %s" % return_code)
 
 
 @cython.cclass
