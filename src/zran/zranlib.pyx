@@ -1,7 +1,7 @@
 # vim: filetype=python
 import struct as py_struct
 import zlib
-from dataclasses import dataclass
+#from dataclasses import dataclass
 from operator import attrgetter
 from typing import Iterable, List, Optional
 
@@ -50,14 +50,13 @@ def check_for_error(return_code: int):
             raise ZranError("zran: failed with error code %s" % return_code)
 
 
-@dataclass(frozen=True)
 class Point:
-    """A dataclass representing a point in a zran index."""
-
-    outloc: int
-    inloc: int
-    bits: int
-    window: bytes
+    """A NOT-dataclass representing a point in a zran index."""
+    def __init__(self, outloc: int, inloc: int, bits: int, window: bytes):
+        self.outloc = outloc
+        self.inloc = inloc
+        self.bits = bits
+        self.window = window
 
     def __repr__(self):
         return f'Point(outloc={self.outloc}, inloc={self.inloc}, bits={self.bits})'
